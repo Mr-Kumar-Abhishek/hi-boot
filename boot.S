@@ -1,4 +1,4 @@
-/* boot.S bootstrap for the kernal */
+/* boot.S bootstrap for the kernel */
 
 #define ASM 	1
 
@@ -12,7 +12,7 @@
 #endif
 
 	 .text 
-	 .globl start /* global entry point into the kernal */
+	 .globl start /* global entry point into the kernel */
 
 start:
 		 
@@ -31,11 +31,11 @@ multiboot_header:
 
 multiboot_entry:
 		 
-		 /* initializing stack pointers .. defination of stack follows */
+		 /* initializing stack pointers .. definition of stack follows */
 
 		 movl 	 $(stack + STACK_SIZE), %esp
 
-		 /* now entering the c main function EXT_C managing the underscore */
+		 /* now entering the cmain function EXT_C managing the underscore */
 
 		 call EXT_C(cmain)
 
@@ -46,8 +46,8 @@ loop: 	hlt
 
 .section 	".bss"
 				
-				/* defining our stack are . The .comm pseudo op declares a comman
-				symbol. If the loader does not find the existing defination it will
+				/* defining our stack area. The .comm pseudo op declares a common
+				symbol. If the loader does not find the existing definition it will
 				allocate STACK_SIZE bytes of uninitialized memory */
 
 			.comm  	stack, STACK_SIZE
