@@ -51,4 +51,3 @@ loop: 	hlt
 				allocate STACK_SIZE bytes of uninitialized memory */
 
 			.comm  	stack, STACK_SIZE
-			
