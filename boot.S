@@ -20,7 +20,7 @@ start:
 
 		 /* aligning header at 32bit boundry */
 
-		 .align
+		 .align 4
 
 multiboot_header: 
 		
