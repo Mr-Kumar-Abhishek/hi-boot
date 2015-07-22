@@ -7,7 +7,7 @@ SECTIONS {
         *(.rodata)
         . = ALIGN(4096);
     }
-    .data : AT(phy + (data - code)) {
+    .data : AT(phys + (data - code)) {
         data = .;
         *(.data)
         . = ALIGN(4096);
