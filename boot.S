@@ -4,6 +4,7 @@
 
 #define MULTIBOOT_HEADER_MAGIC 	0x1BADB002 /* for multiboot header */
 #define MULTIBOOT_HEADER_FLAGS 	0x00000003 /* flags for multiboot header */
+#define STACK_SIZE 0x4000 				   /* stack size of 16kb */
 
 #ifdef HAVE_ASM_USCORE 	
 # define EXT_C(sym)  		_## sym
